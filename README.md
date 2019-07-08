@@ -37,7 +37,13 @@ strings, values = t("the sum of {a} is {sum(a)}")
 # values == ([1, 2, 3], 6)
 ```
 
-Any Python 3 expression can be used
+Double curly brackets are interpreted as a single textual curly bracket:
+
+```py
+strings, values = t("Inline a set between {{ and }} like this: {({1, 2, 3})}")
+# strings == ('Inline a set between { and } like this: ', '')
+# values == ({1, 2, 3},)
+```
 
 ## rexample
 
