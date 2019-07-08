@@ -2,6 +2,8 @@
 
 A Python version of JavaScript's [tagged templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#Tagged_templates), mixed with Python 3's [f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings).
 
+For a more involved example how this package can be used in practice, see [htm.py](https://github.com/jviide/htm.py) that implements JSX-like syntax in plain Python.
+
 ## Installation
 
 ```sh
@@ -10,7 +12,7 @@ $ pip3 install tagged
 
 ## Usage
 
-This package defines `tag`, that can be used as a decorator to create new tags. Let's define a boring one.
+This package defines `tag`, a decorator for creating new tags. Let's define a simple one:
 
 ```py
 from tagged import tag
