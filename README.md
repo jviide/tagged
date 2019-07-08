@@ -30,9 +30,9 @@ def rex(strings, values):
 
 
 greeting = re.compile("Hello|Hi|Greetings")
-name = "Python 3"
+name = "Python 3.7"
 rex("{greeting}, {name}!")
-# re.compile('(?:Hello|Hi|Greetings), (?:World)!')
+# re.compile('(?:Hello|Hi|Greetings), (?:Python\\ 3\\.7)!')
 ```
 
 ## Development
