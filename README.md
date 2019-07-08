@@ -1,4 +1,4 @@
-# tagged
+# tagged [![CircleCI](https://circleci.com/gh/jviide/tagged.svg?style=shield)](https://circleci.com/gh/jviide/tagged)
 
 A Python version of JavaScript's tagged templates.
 
