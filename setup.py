@@ -5,7 +5,7 @@ with open("README.md", "r") as readme:
 
 setuptools.setup(
     name="tagged",
-    version="0.0.1",
+    version="0.0.2",
     author="Joachim Viide",
     author_email="jviide@iki.fi",
     description="Tagged templates for Python",

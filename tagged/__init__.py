@@ -13,7 +13,7 @@ class ParseError(ValueError):
     pass
 
 
-def split(string):
+def split(string, compile_exprs=False):
     data = string.encode("utf-8")
     bio = io.BytesIO(data)
 
@@ -39,7 +39,7 @@ def split(string):
         bio.seek(start)
 
         expr, row, column = parse_expr(bio)
-        exprs.append(compile(expr, "", "eval"))
+        exprs.append(expr if not compile_exprs else compile(expr, "", "eval"))
 
         start_row = bisect(row_offsets, start) - 1
         if row > 0:
@@ -72,7 +72,7 @@ def tag(func=None, *, cache_maxsize=128):
     def _tag(func):
         @functools.wraps(func)
         def __tag(string):
-            strings, exprs = cached_split(string)
+            strings, exprs = cached_split(string, compile_exprs=True)
 
             stack = inspect.stack()
             f_globals = stack[1].frame.f_globals
